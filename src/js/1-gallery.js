@@ -91,10 +91,6 @@ const imagesAdd = images
 gallery.insertAdjacentHTML('beforeend', imagesAdd);
 ('');
 
-gallery.addEventListener('click', function (event) {
-  event.preventDefault();
-});
-
 document.addEventListener('DOMContentLoaded', function () {
   const lightbox = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
