@@ -12,6 +12,26 @@
       <a href="./index.html">Go to home</a>
       <h1>Welcome to Form</h1>
     </section>
+    <!-- form section -->
+    <form class="feedback-form" autocomplete="off">
+      <label class="form-label" for="email"> Email </label>
+      <input
+        class="form-input"
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Email"
+      />
+      <label class="form-label" for="user-comment"> Message </label>
+      <textarea
+        class="form-area"
+        name="user-message"
+        id="user-message"
+        rows="8"
+        placeholder="Your Message"
+      ></textarea>
+      <button class="btn-form" type="submit">Submit</button>
+    </form>
     <script type="module" src="./js/2-form.js"></script>
   </body>
 </html>
