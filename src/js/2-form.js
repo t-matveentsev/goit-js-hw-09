@@ -4,24 +4,35 @@ const form = document.querySelector('.feedback-form');
 const emailInput = form.querySelector('.form-input');
 const textarea = form.querySelector('.form-area');
 
-emailInput.addEventListener('input', onInputChange);
-textarea.addEventListener('input', onInputChange);
+form.addEventListener('input', onInputChange);
 form.addEventListener('submit', handleSubmit);
 
 populateForm();
 
 function handleSubmit(event) {
   event.preventDefault();
+
+  const email = emailInput.value.trim();
+  const message = textarea.value.trim();
+
+  if (email === '' || message === '') {
+    alert('Please fill in all fields before submitting.');
+    return;
+  }
+
   localStorage.removeItem(STORAGE_KEY);
   form.reset();
 }
 
 function onInputChange() {
-  const message = {
-    email: emailInput.value,
-    message: textarea.value,
+  const email = emailInput.value.trim();
+  const message = textarea.value.trim();
+
+  const savedForm = {
+    email: email,
+    message: message,
   };
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(message));
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(savedForm));
 }
 
 function populateForm() {
