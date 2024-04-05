@@ -20,6 +20,13 @@ function handleSubmit(event) {
     return;
   }
 
+  const formData = {
+    email: email,
+    message: message,
+  };
+
+  console.log(formData);
+
   localStorage.removeItem(STORAGE_KEY);
   form.reset();
 }
