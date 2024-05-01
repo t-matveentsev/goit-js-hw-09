@@ -19,7 +19,7 @@
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ddd;
+  border: 1px solid #fafafa;
   border-radius: 5px;
   box-sizing: border-box;
 }
@@ -28,7 +28,7 @@
   width: 100%;
   padding: 10px;
   background-color: #4d5ae5;
-  color: #fff;
+  color: #fafafa;
   border: none;
   border-radius: 5px;
   cursor: pointer;
